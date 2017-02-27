@@ -1,0 +1,39 @@
+<div class="row " ng-controller="modalsControler"> 
+  <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 logo-home"> 
+    <a ng-href="/home"><img alt="HomeChef" src="data/option5/logo.png" /></a> 
+  </div>
+  <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 header_buttons"> 
+    <a ng-href="" class="becomechef-bt ">Become a HomeChef</a> 
+    <a ng-href="" class="becomechef-bt" ng-click="showHideModals('loginModalId', true)" style=" margin-right:10px;">Log In</a> 
+    <a ng-href="" class="becomechef-bt" ng-click="showHideModals('regisModalId', true)"  style=" margin-right:10px;">Sign Up</a> 
+  </div> 
+</div>
+
+<div class="main-header2">
+  <div class="startsearch"><img src="images/start-searching.png"></div>
+  <div class="col-xs-4 col-sm-12 col-md-5 col-lg-4 header-search-box">
+      <div class="search_box">
+        <form class="form-inline">
+          <div class="form-group input-serach">
+            <input type="text"  placeholder="What do you want to eat today?">
+          </div>
+          <button type="submit" class="pull-right btn-search"></button>
+        </form>
+      </div>
+  </div>
+</div>
+<!-- Full Page Image Background Carousel Header -->
+<div id="myCarousel" class="carousel slide">   
+  <div class="carousel-inner">
+    <div class="item active"> 
+      <!-- Set the first background image using inline CSS below. -->
+      <div class="fill" style="background-image:url('http://res.cloudinary.com/homechefpk/image/upload/v1440690228/slide1_rprigp.jpg');"></div>
+      <div class="carousel-caption">
+        <h2>Delicious Meals From Home Chefs In Karachi<br>
+          <a class="btn btn-primary btn-lg" style="margin-top:15px;">How It Works</a></h2>
+      </div>
+    </div>
+  </div> 
+</div>
+ 
+<div ui-view="dashboard-footerservices"></div> 

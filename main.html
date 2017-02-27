@@ -1,0 +1,90 @@
+<div class="row " ng-controller="modalsControler">
+  
+
+ <div class="myNewnav">
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/home" ng-click="reloadRoute()" scrollup><img src="data/option5/logo.png" /></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right" >
+        <li ng-show="isLoggedIn()">
+          <a ng-href=""  ng-click="showMarketPlace()">MarketPlace</a>
+        </li>
+        <li ng-show="isLoggedIn() && isUserChef">
+          <a ng-href="" ui-sref="dashboard.chefdishes">My Dishes</a>
+        </li>
+        <li ng-show="isLoggedIn()">
+          <a ng-href=""  ng-click="previewProfile()">My Profile</a>
+        </li>
+        <li ng-show="isLoggedIn()">
+          <a ng-href=""  ng-click="logOut()">Logout</a>
+        </li>
+        <li ng-hide="isLoggedIn()"> 
+          <a ng-href="" data-toggle="modal" data-target=""   
+      style="margin-right:10px;" ng-click="showRegisterModalNotLoggedInUser(true)" >Sign Up</a>
+        </li>
+         <li ng-hide="isLoggedIn()"> 
+          <a  ng-href="" data-toggle="modal" data-target=""
+     ng-click="showLoginModalNotLoggedInUser()" style=" margin-right:10px;">Log In</a> 
+         </li>
+      </ul>
+    </div> 
+  </div> 
+</nav>
+</div>
+
+
+
+</div>
+<!-- Full Page Image Background Carousel Header -->
+<div id="myCarousel" class="carousel slide" ng-controller="modalsControler">
+  <!-- Indicators -->
+  <!-- Wrapper for Slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <!-- Set the first background image using inline CSS below. -->
+      <div class="fill" style="background-image:url('http://res.cloudinary.com/homechefpk/image/upload/v1440690962/host_vxk13e.png');"></div>
+      <div class="carousel-caption">
+        <h2>Reach Foodies Across Karachi! </h2>
+        <p class="xtrasize">Join the largest marketplace for homemade meals online.</p>
+
+        <a class="btn btn-primary btn-lg" style="margin-top:15px;" ng-hide="isLoggedIn()"  ng-href="" >Become a HomeChef Now!</a>
+
+        <a class="btn btn-primary btn-lg" style="margin-top:15px;" ng-show="isLoggedIn()" ng-href="" ng-click="changeType()" scrollup>List Your Dish</a>
+
+      </div>
+    </div>
+  </div>
+   
+</div>
+<!-- HEADER -->
+<!-- end header -->
+<!-- Home slideder-->
+<!-- END Home slideder-->
+<div class="page-top">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12">
+        <h2 style="text-align:center; color: #ff7a18;"> If you love to cook and everyone around you loves your cooking, watch this video to see how you can take your food dream to the next level.</h2>
+      </div>
+    </div>
+  </div>
+</div>
+<!---->
+
+ 
+<div ui-view="mainpage-video"  autoscroll="false"></div>
+<div ui-view="mainpage-section2"  autoscroll="false"></div>
+
+ 

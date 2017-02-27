@@ -1,0 +1,83 @@
+
+<footer id="footer" ng-controller="footerControler">
+  <div class="container">
+    <div id="introduce-box" class="row">
+      <div class="col-md-3">
+        <div id="address-box"><a href="#"><img src="data/introduce-logo.png" alt=""></a>
+          <div id="address-list">
+            <div class="tit-name">Customer Support:</div>
+            <div class="tit-contain">0311-1222-605</div>
+            <div class="tit-name">Text & Whatsapp:</div>
+            <div class="tit-contain">0336-384-9484</div>
+            <div class="tit-name">Email:</div>
+            <div class="tit-contain">
+              <a href="mailto:support@homechef.pk">support@homechef.pk</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="row">
+          <div class="col-sm-4">
+
+          </div>
+          <div class="col-sm-4" ng-show="isLoggedIn()">
+            <div class="introduce-title">Dashboard</div>
+            <ul id="introduce-Account" class="introduce-list">
+              <li><a href="" ng-click="editProfile()">My Profile</a></li>
+              <li><a href="" ng-click="showOrdersListings()">My Order</a></li>
+              <li ng-show="isUserChef"><a ng-click="showListings()">My Listings</a></li>
+              <li><a href="" ng-click="editMyAccount()">My Account</a></li>
+              <li><a href="" ng-click="logOut()">Logout</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-4">
+            <div class="introduce-title">Support</div>
+            <ul id="introduce-support" class="introduce-list">
+              <li><a ng-href="/aboutus" scrollup>About Us</a></li>
+              <li><a ng-href="/howitworks" scrollup>How It Works</a></li>
+              <li><a ng-href="/faq" scrollup>FAQs</a></li>
+              <li><a ng-href="/contactus" scrollup>Contact Us</a></li>
+              <li><a ng-href="/termspolicy" scrollup>Terms &amp; Conditions</a></li>
+              <li><a ng-href="/privacypolicy" scrollup>Privacy Policy</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div id="contact-box">
+          <div class="introduce-title">Subscribe for deals & discounts!</div>
+<div>
+          <div class="form-group" id="mail-box" style="margin-bottom:30px !important">
+            <input type="text" placeholder="Your Email Address" ng-model="emailSuscription" style="margin-bottom: 7px !important;">
+       
+            <input type="text" placeholder="Your Mobile Number" ng-model="mobilenumber" style="margin-bottom: 7px !important;" minlength="11" maxlength="11" ng-keypress="skipSpaceKeys($event)">
+            <div class="form-group-btn">
+            <button class="btn btn-default" type="button" ng-click="getEmailForSubscription();" style="float:right !important;margin-bottom: 7px !important;">Subscribe</button>
+            </div> 
+          </div>
+</div>
+        
+          <p ng-show="emailField" class="email_validation" style="font-size:15px !important;margin-top: 37px !important;margin-left:-30px;margin-bottom: 10px !important">Please enter a valid email address.</p>
+           <p ng-show="mobileField" class="email_validation" style="font-size:15px !important;margin-top: 37px !important;margin-left:-30px;margin-bottom: 10px !important">Please enter a valid mobile number.</p>
+             <p ng-show="mobileemailField" class="email_validation" style="font-size:15px !important;margin-top: 37px !important;margin-left:-12px;margin-bottom: 10px !important">Please enter a valid email address & mobile number.</p>
+           
+          <div class="introduce-title">Follow us on:</div>
+          <div class="social-link">
+            <a href="https://www.facebook.com/homechef.pk" target="blank"><i class="fa fa-facebook"></i></a>
+            <!--a href="#"><i class="fa fa-pinterest-p"></i></a-->
+            <a href="https://twitter.com/homechefpk" target="blank"><i class="fa fa-twitter"></i></a>
+            <!--a href="#"><i class="fa fa-google-plus"></i></a-->
+            <a href="https://instagram.com/homechef.pk" target="blank"><i class="fa fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer-menu-box">
+      <p class="text-center">Copyrights &#169; 2016 HomeChef. All Rights Reserved.</p>
+    </div>
+
+  </div>
+</footer>
+
+<a ng-href="" class="scroll_top" title="Scroll to Top" style="display: inline;" scrollup onmouseenter="$(this).tooltip('show')">Scroll</a> 
